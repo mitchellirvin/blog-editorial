@@ -23,13 +23,14 @@ into the {body} of the default.hbs template --}}
     </div>
 
     {{!-- Email subscribe form at the bottom of the page --}}
-    {{#if @labs.subscribers}}
-    <section class="subscribe-form">
-        <h3 class="subscribe-form-title">Subscribe to {{@site.title}}</h3>
-        <p>Get the latest posts delivered right to your inbox</p>
-        {{subscribe_form placeholder="youremail@example.com"}}
-    </section>
-    {{/if}}
+    <div class="content">
+        {{#if @labs.subscribers}}
+            <section class="post-subscribe">
+                {{subscribe_form placeholder=(t "Your email address") form_class="post-subscribe-form" input_class="post-subscribe-input" button_class="post-subscribe-button"}}
+                <p>{{t "Get the latest posts delivered right to your inbox."}}</p>
+            </section>
+        {{/if}}
+    </div>
 
     <footer class="post-footer">
 

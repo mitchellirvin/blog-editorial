@@ -4,25 +4,48 @@
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
+$color-white:		#ffffff;
+$color-black:		#000000;
+
+$color-gray-98:		#faf9f7; // elements light background
+$color-gray-95:		#f2f2f0; // menu - background
+$color-gray-90:		#e5e4e1; // every elements border
+
+$color-blue-80:		#c2c7cc; // nav, menu, pagination - button border
+$color-blue-60:		#8a9199; // nav, menu, pagination - button font
+
+$color-blue-30:		#45484d;
+$color-blue-15:		#212226;
+
+$color-yellow-100:	#ffc336;
+$color-red-95:		#f26a3d;
+
+$color-social-twitter:		#3ea9dd;
+$color-social-facebook:		#3c5a98;
+$color-social-googleplus:	#d14836;
+
+$primary-color: $color-red-95; // define primary color
+
+
 /* Type */
 
 	body, input, select, textarea {
 		color: _palette(fg);
 		font-family: _font(family);
-		font-size: 13pt;
+		font-size: 18px;
 		font-weight: _font(weight);
 		line-height: 1.65;
 
 		@include breakpoint('<=xlarge') {
-			font-size: 11pt;
+			font-size: 18px;
 		}
 
 		@include breakpoint('<=large') {
-			font-size: 10pt;
+			font-size: 16px;
 		}
 
 		@include breakpoint('<=xxsmall') {
-			font-size: 9pt;
+			font-size: 14px;
 		}
 	}
 
@@ -37,7 +60,7 @@
 
 		&:hover {
 			border-bottom-color: _palette(accent);
-			color: _palette(accent) !important;
+			color: _palette(accent);
 
 			strong {
 				color: inherit;
